@@ -1,0 +1,69 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void DownloadHandlerAudioClip_Create_mF088040A27BB328CB057563702E95B57418F1B71 (void);
+extern void DownloadHandlerAudioClip_InternalCreateAudioClip_m789B76138CF7B91F510EE1936A63A07C08975098 (void);
+extern void DownloadHandlerAudioClip__ctor_mB8C00870FDA938440C2E89BCAC682E636641B61F (void);
+extern void DownloadHandlerAudioClip_GetNativeData_mE7E3D8ED446BE6E5ACAC630F1C2E99687E605766 (void);
+extern void DownloadHandlerAudioClip_Dispose_mFE45B0B7E69D9AF774D2FDD484041FA374B112A6 (void);
+extern void DownloadHandlerAudioClip_get_audioClip_mBBA8B1C847780D3442649A0E52C822471F87C262 (void);
+extern void DownloadHandlerAudioClip_set_streamAudio_mD760F3FC0A37AE1DD889DDA0B3C0B39504B23E30 (void);
+extern void DownloadHandlerAudioClip_Create_Injected_m94923E2B9434EB0A89D94DA65C1AEC17944F7880 (void);
+extern void DownloadHandlerAudioClip_get_audioClip_Injected_m289A0FEF47542AAC49A30D15A8B14690F40062F4 (void);
+extern void DownloadHandlerAudioClip_set_streamAudio_Injected_mB5FCA3C13F88455F4022F2AA374B6CC34BEEBA98 (void);
+extern void BindingsMarshaller_ConvertToNative_m0B6B633B55007210A0C9A8F2BE35EE1AD1298016 (void);
+static Il2CppMethodPointer s_methodPointers[11] = 
+{
+	DownloadHandlerAudioClip_Create_mF088040A27BB328CB057563702E95B57418F1B71,
+	DownloadHandlerAudioClip_InternalCreateAudioClip_m789B76138CF7B91F510EE1936A63A07C08975098,
+	DownloadHandlerAudioClip__ctor_mB8C00870FDA938440C2E89BCAC682E636641B61F,
+	DownloadHandlerAudioClip_GetNativeData_mE7E3D8ED446BE6E5ACAC630F1C2E99687E605766,
+	DownloadHandlerAudioClip_Dispose_mFE45B0B7E69D9AF774D2FDD484041FA374B112A6,
+	DownloadHandlerAudioClip_get_audioClip_mBBA8B1C847780D3442649A0E52C822471F87C262,
+	DownloadHandlerAudioClip_set_streamAudio_mD760F3FC0A37AE1DD889DDA0B3C0B39504B23E30,
+	DownloadHandlerAudioClip_Create_Injected_m94923E2B9434EB0A89D94DA65C1AEC17944F7880,
+	DownloadHandlerAudioClip_get_audioClip_Injected_m289A0FEF47542AAC49A30D15A8B14690F40062F4,
+	DownloadHandlerAudioClip_set_streamAudio_Injected_mB5FCA3C13F88455F4022F2AA374B6CC34BEEBA98,
+	BindingsMarshaller_ConvertToNative_m0B6B633B55007210A0C9A8F2BE35EE1AD1298016,
+};
+static const int32_t s_InvokerIndices[11] = 
+{
+	21637,
+	6651,
+	6651,
+	15753,
+	17620,
+	17385,
+	13147,
+	21635,
+	27305,
+	24632,
+	27306,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAudioModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAudioModule_CodeGenModule = 
+{
+	"UnityEngine.UnityWebRequestAudioModule.dll",
+	11,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
