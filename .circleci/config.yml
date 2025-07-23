@@ -1,3 +1,4 @@
+# .circleci/config.yml
 version: 2.1
 
 executors:
@@ -11,61 +12,61 @@ jobs:
     steps:
       - checkout
 
-      # 1) Restore cached Pods (speeds up subsequent runs)
+      # 1) Restore CocoaPods cache (if you’re using Pods in Build/)
       - restore_cache:
           keys:
-            - cocoapods-{{ checksum "Podfile.lock" }}
+            - cocoapods-{{ checksum "Build/Podfile.lock" }}
             - cocoapods-
 
-      # 2) If you’re using CocoaPods in the Unity export:
+      # 2) Install Pods (only if there’s a Podfile under Build/)
       - run:
           name: Install CocoaPods
           command: |
-            if [ -f Podfile ]; then
+            if [ -f Build/Podfile ]; then
+              cd Build
               pod install --repo-update
             fi
 
-      # 3) Save Pods cache
+      # 3) Save CocoaPods cache
       - save_cache:
           paths:
-            - Pods
+            - Build/Pods
             - ~/.cocoapods
-          key: cocoapods-{{ checksum "Podfile.lock" }}
+          key: cocoapods-{{ checksum "Build/Podfile.lock" }}
 
-      # 4) Build & test
+      # 4) Build & test on the Simulator
       - run:
-          name: Build & Test on Simulator
+          name: Build & Test on iOS Simulator
           command: |
-            set -o pipefail && \
-            # if you generated a workspace via `pod install`, use -workspace:
+            set -o pipefail
+            cd Build
             if [ -d Unity-iPhone.xcworkspace ]; then
               xcodebuild \
                 -workspace Unity-iPhone.xcworkspace \
                 -scheme Unity-iPhone \
                 -configuration Release \
                 -sdk iphonesimulator \
-                -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' \
+                -destination "platform=iOS Simulator,name=iPhone 12,OS=latest" \
                 test | tee xcode_test.log
             else
-              # otherwise build the raw project
               xcodebuild \
                 -project Unity-iPhone.xcodeproj \
                 -scheme Unity-iPhone \
                 -configuration Release \
                 -sdk iphonesimulator \
-                -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' \
+                -destination "platform=iOS Simulator,name=iPhone 12,OS=latest" \
                 test | tee xcode_test.log
             fi
 
-      # 5) Persist logs & build products
+      # 5) Persist logs & build output
       - store_artifacts:
-          path: xcode_test.log
+          path: Build/xcode_test.log
           destination: logs
       - store_artifacts:
-          path: build/Release-iphonesimulator
+          path: Build/Build/Products/Release-iphonesimulator
           destination: app
       - store_test_results:
-          path: build/Release-iphonesimulator
+          path: Build/Build/Products/Release-iphonesimulator
 
 workflows:
   build-and-test:
