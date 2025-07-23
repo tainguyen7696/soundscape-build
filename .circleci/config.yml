@@ -1,21 +1,73 @@
 version: 2.1
 
+executors:
+  macos-xcode:
+    macos:
+      xcode: "16.4.0"
+
 jobs:
   build-and-test:
-    macos:
-      xcode: 16.4.0
+    executor: macos-xcode
     steps:
       - checkout
+
+      # 1) Restore cached Pods (speeds up subsequent runs)
+      - restore_cache:
+          keys:
+            - cocoapods-{{ checksum "Podfile.lock" }}
+            - cocoapods-
+
+      # 2) If you’re using CocoaPods in the Unity export:
       - run:
-          name: Build and Test
-          command: xcodebuild -scheme YourSchemeName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' test
+          name: Install CocoaPods
+          command: |
+            if [ -f Podfile ]; then
+              pod install --repo-update
+            fi
+
+      # 3) Save Pods cache
+      - save_cache:
+          paths:
+            - Pods
+            - ~/.cocoapods
+          key: cocoapods-{{ checksum "Podfile.lock" }}
+
+      # 4) Build & test
+      - run:
+          name: Build & Test on Simulator
+          command: |
+            set -o pipefail && \
+            # if you generated a workspace via `pod install`, use -workspace:
+            if [ -d Unity-iPhone.xcworkspace ]; then
+              xcodebuild \
+                -workspace Unity-iPhone.xcworkspace \
+                -scheme Unity-iPhone \
+                -configuration Release \
+                -sdk iphonesimulator \
+                -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' \
+                test | tee xcode_test.log
+            else
+              # otherwise build the raw project
+              xcodebuild \
+                -project Unity-iPhone.xcodeproj \
+                -scheme Unity-iPhone \
+                -configuration Release \
+                -sdk iphonesimulator \
+                -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' \
+                test | tee xcode_test.log
+            fi
+
+      # 5) Persist logs & build products
+      - store_artifacts:
+          path: xcode_test.log
+          destination: logs
       - store_artifacts:
           path: build/Release-iphonesimulator
+          destination: app
       - store_test_results:
           path: build/Release-iphonesimulator
 
 workflows:
-  version: 2
-  build-test:
+  build-and-test:
     jobs:
       - build-and-test
