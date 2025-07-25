@@ -6,6 +6,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Core();
 	RegisterModule_Core();
 
+	void RegisterModule_AndroidJNI();
+	RegisterModule_AndroidJNI();
+
 	void RegisterModule_Animation();
 	RegisterModule_Animation();
 
@@ -30,6 +33,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_ImageConversion();
 	RegisterModule_ImageConversion();
 
+	void RegisterModule_JSONSerialize();
+	RegisterModule_JSONSerialize();
+
 	void RegisterModule_Input();
 	RegisterModule_Input();
 
@@ -38,9 +44,6 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 
 	void RegisterModule_InputForUI();
 	RegisterModule_InputForUI();
-
-	void RegisterModule_JSONSerialize();
-	RegisterModule_JSONSerialize();
 
 	void RegisterModule_Physics();
 	RegisterModule_Physics();
@@ -56,6 +59,12 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 
 	void RegisterModule_SpriteShape();
 	RegisterModule_SpriteShape();
+
+	void RegisterModule_Tilemap();
+	RegisterModule_Tilemap();
+
+	void RegisterModule_SpriteMask();
+	RegisterModule_SpriteMask();
 
 	void RegisterModule_Subsystems();
 	RegisterModule_Subsystems();
@@ -75,12 +84,6 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_TextCoreTextEngine();
 	RegisterModule_TextCoreTextEngine();
 
-	void RegisterModule_Tilemap();
-	RegisterModule_Tilemap();
-
-	void RegisterModule_SpriteMask();
-	RegisterModule_SpriteMask();
-
 	void RegisterModule_UI();
 	RegisterModule_UI();
 
@@ -90,8 +93,14 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_UnityAnalyticsCommon();
 	RegisterModule_UnityAnalyticsCommon();
 
+	void RegisterModule_UnityConnect();
+	RegisterModule_UnityConnect();
+
 	void RegisterModule_UnityWebRequest();
 	RegisterModule_UnityWebRequest();
+
+	void RegisterModule_UnityAnalytics();
+	RegisterModule_UnityAnalytics();
 
 	void RegisterModule_UnityWebRequestAudio();
 	RegisterModule_UnityWebRequestAudio();

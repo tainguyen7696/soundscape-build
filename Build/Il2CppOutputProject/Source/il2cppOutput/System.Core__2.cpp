@@ -356,7 +356,6 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 struct DebugInfoComparer_tF6521053ED3200284BB605E744AF65A0482F861A;
 struct EqualDoubleLiftedToNull_t4B2EF8D697DD322C5BF61F457F2037A5BF6C7FD0;
 struct EqualSingleLiftedToNull_tCE57838B753BCAF33E465F444F3499E7248F417B;
-struct EqualUInt16LiftedToNull_t26B4FC712A4938A711F1A7E703E31BC1672AD723;
 struct EqualUInt32LiftedToNull_tC3135EF4CC9EE18E0CA98B8FA49CE14AEF11D13E;
 struct EqualUInt64LiftedToNull_t6DBBD69EED4ECA69D5F52BDD740DB626FEEC6AF4;
 struct ExclusiveOrBoolean_t92FD398038555820AC52C5A4BB93C1A5C52068D8;
@@ -2153,9 +2152,6 @@ struct EqualDoubleLiftedToNull_t4B2EF8D697DD322C5BF61F457F2037A5BF6C7FD0  : publ
 {
 };
 struct EqualSingleLiftedToNull_tCE57838B753BCAF33E465F444F3499E7248F417B  : public EqualInstruction_tCA9E5B1CCAD447001321B23A4016D643A9F4436C
-{
-};
-struct EqualUInt16LiftedToNull_t26B4FC712A4938A711F1A7E703E31BC1672AD723  : public EqualInstruction_tCA9E5B1CCAD447001321B23A4016D643A9F4436C
 {
 };
 struct EqualUInt32LiftedToNull_tC3135EF4CC9EE18E0CA98B8FA49CE14AEF11D13E  : public EqualInstruction_tCA9E5B1CCAD447001321B23A4016D643A9F4436C
@@ -4666,72 +4662,6 @@ inline void List_1_AddWithResize_m47222083904E5992F1343D4C4CE32F5282C06809 (List
 {
 	((  void (*) (List_1_t6CD7C05A234AA2E6AB05AA0F27B4FDFF79C0E61D*, InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D, const RuntimeMethod*))List_1_AddWithResize_m47222083904E5992F1343D4C4CE32F5282C06809_gshared)(__this, ___0_item, method);
 }
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EqualUInt16LiftedToNull_Run_m280935C52201680772A0367A5B887DB8BDC54E02 (EqualUInt16LiftedToNull_t26B4FC712A4938A711F1A7E703E31BC1672AD723* __this, InterpretedFrame_tF030A9AC78837B1C2F9CD54B43F7A04D85A8D92D* ___0_frame, const RuntimeMethod* method) 
-{
-	RuntimeObject* V_0 = NULL;
-	RuntimeObject* V_1 = NULL;
-	{
-		InterpretedFrame_tF030A9AC78837B1C2F9CD54B43F7A04D85A8D92D* L_0 = ___0_frame;
-		NullCheck(L_0);
-		RuntimeObject* L_1;
-		L_1 = InterpretedFrame_Pop_mB08F9A4193FC9EEDFA06CF1D1950A4D6FDE035A3(L_0, NULL);
-		V_0 = L_1;
-		InterpretedFrame_tF030A9AC78837B1C2F9CD54B43F7A04D85A8D92D* L_2 = ___0_frame;
-		NullCheck(L_2);
-		RuntimeObject* L_3;
-		L_3 = InterpretedFrame_Pop_mB08F9A4193FC9EEDFA06CF1D1950A4D6FDE035A3(L_2, NULL);
-		V_1 = L_3;
-		RuntimeObject* L_4 = V_1;
-		if (!L_4)
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		RuntimeObject* L_5 = V_0;
-		if (L_5)
-		{
-			goto IL_001d;
-		}
-	}
-
-IL_0014:
-	{
-		InterpretedFrame_tF030A9AC78837B1C2F9CD54B43F7A04D85A8D92D* L_6 = ___0_frame;
-		NullCheck(L_6);
-		InterpretedFrame_Push_m3AB9DC7D70271DF1C6994B37C196C430FFDDAC53(L_6, NULL, NULL);
-		goto IL_0031;
-	}
-
-IL_001d:
-	{
-		InterpretedFrame_tF030A9AC78837B1C2F9CD54B43F7A04D85A8D92D* L_7 = ___0_frame;
-		RuntimeObject* L_8 = V_1;
-		RuntimeObject* L_9 = V_0;
-		NullCheck(L_7);
-		InterpretedFrame_Push_mE3F348D8327A9AC2B555DC21DFB26F4F0F9C314C(L_7, (bool)((((int32_t)((*(uint16_t*)UnBox(L_8, il2cpp_defaults.uint16_class)))) == ((int32_t)((*(uint16_t*)UnBox(L_9, il2cpp_defaults.uint16_class)))))? 1 : 0), NULL);
-	}
-
-IL_0031:
-	{
-		return 1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EqualUInt16LiftedToNull__ctor_m9E4248AC086D750703C85DC0D161D42E282A1212 (EqualUInt16LiftedToNull_t26B4FC712A4938A711F1A7E703E31BC1672AD723* __this, const RuntimeMethod* method) 
-{
-	{
-		EqualInstruction__ctor_mB45B1CA20D691E8A97A5CA447E504FBE0F14723B(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

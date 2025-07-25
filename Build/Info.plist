@@ -25,7 +25,7 @@
     <key>CFBundleShortVersionString</key>
     <string>1.0</string>
     <key>CFBundleVersion</key>
-    <string>0</string>
+    <string>14</string>
     <key>LSRequiresIPhoneOS</key>
     <true />
     <key>UILaunchStoryboardName</key>
@@ -44,11 +44,11 @@
       <string>metal</string>
     </array>
     <key>UIRequiresFullScreen</key>
-    <true />
+    <false />
     <key>UIRequiresPersistentWiFi</key>
     <false />
     <key>UIStatusBarHidden</key>
-    <true />
+    <false />
     <key>UIStatusBarStyle</key>
     <string>UIStatusBarStyleDefault</string>
     <key>UISupportedInterfaceOrientations</key>

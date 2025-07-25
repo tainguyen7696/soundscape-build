@@ -1435,6 +1435,7 @@ struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_StaticFields
 struct AppContextSwitches_t542F10E9BE2333B7BE24C8858C8A24EFA6C06D38_StaticFields
 {
 	bool ___SetActorAsReferenceWhenCopyingClaimsIdentity;
+	bool ___NoAsyncCurrentCulture;
 	bool ___EnforceJapaneseEraYearRanges;
 	bool ___FormatJapaneseFirstYearAsANumber;
 	bool ___EnforceLegacyJapaneseDateParsing;

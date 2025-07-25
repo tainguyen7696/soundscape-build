@@ -2840,11 +2840,11 @@ struct BoxedPrimitives_t306A24A9D64E429B168D416B37224A49AFE4A217_StaticFields
 	RuntimeObject* ___Int64_6;
 	RuntimeObject* ___Int64_7;
 	RuntimeObject* ___Int64_8;
+	RuntimeObject* ___DecimalZero;
 	RuntimeObject* ___DoubleNaN;
 	RuntimeObject* ___DoublePositiveInfinity;
 	RuntimeObject* ___DoubleNegativeInfinity;
 	RuntimeObject* ___DoubleZero;
-	RuntimeObject* ___DoubleNegativeZero;
 };
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields
 {

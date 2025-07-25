@@ -44,22 +44,22 @@ static Il2CppMethodPointer s_methodPointers[16] =
 };
 static const int32_t s_InvokerIndices[16] = 
 {
-	17620,
-	17620,
-	13277,
-	29422,
-	29337,
-	29337,
-	29337,
-	29073,
-	29073,
-	29073,
-	29073,
-	29073,
-	29073,
-	29073,
-	23661,
-	29422,
+	17762,
+	17762,
+	13393,
+	29629,
+	29543,
+	29543,
+	29543,
+	29278,
+	29278,
+	29278,
+	29278,
+	29278,
+	29278,
+	29278,
+	23868,
+	29629,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_IdentityModel_JsonWebTokens_CodeGenModule;
 const Il2CppCodeGenModule g_Microsoft_IdentityModel_JsonWebTokens_CodeGenModule = 

@@ -1444,6 +1444,7 @@ struct MatchNumberDelegate_t099FBFD09058FE2C73C1CBA7A89A3A70EB294E23  : public M
 struct AppContextSwitches_t542F10E9BE2333B7BE24C8858C8A24EFA6C06D38_StaticFields
 {
 	bool ___SetActorAsReferenceWhenCopyingClaimsIdentity;
+	bool ___NoAsyncCurrentCulture;
 	bool ___EnforceJapaneseEraYearRanges;
 	bool ___FormatJapaneseFirstYearAsANumber;
 	bool ___EnforceLegacyJapaneseDateParsing;

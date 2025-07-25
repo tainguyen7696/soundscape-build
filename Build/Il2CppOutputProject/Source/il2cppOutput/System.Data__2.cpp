@@ -5524,6 +5524,12 @@ IL_0040:
 		return L_9;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColumnTypeConverter_GetStandardValuesExclusive_m89AA1B297BEC13ED9361589431B2B7900E39A95A (ColumnTypeConverter_t1101FCEB013096E798CD45B1CC27756BC47667BF* __this, RuntimeObject* ___0_context, const RuntimeMethod* method) 
+{
+	{
+		return (bool)1;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColumnTypeConverter_GetStandardValuesSupported_mE7D63CAF1AE11230AC5EA487DC54AC0B78A2AE06 (ColumnTypeConverter_t1101FCEB013096E798CD45B1CC27756BC47667BF* __this, RuntimeObject* ___0_context, const RuntimeMethod* method) 
 {
 	{

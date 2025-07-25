@@ -11691,6 +11691,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrimaryKeyTypeConverter__ctor_m63741369D
 		return;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PrimaryKeyTypeConverter_GetPropertiesSupported_m98808EC0757F43BCD6D24279F08175C4E3759F6A (PrimaryKeyTypeConverter_t4B0AB822F25A0F925BD2CFD3139F9F18B63EFE00* __this, RuntimeObject* ___0_context, const RuntimeMethod* method) 
+{
+	{
+		return (bool)0;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PrimaryKeyTypeConverter_CanConvertTo_m263BF214CD3F528F62AF93CBE2B2919BCFE76CBB (PrimaryKeyTypeConverter_t4B0AB822F25A0F925BD2CFD3139F9F18B63EFE00* __this, RuntimeObject* ___0_context, Type_t* ___1_destinationType, const RuntimeMethod* method) 
 {
 	{

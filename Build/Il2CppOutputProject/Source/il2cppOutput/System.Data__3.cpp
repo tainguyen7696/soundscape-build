@@ -3892,6 +3892,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataTableTypeConverter__ctor_mF62663895E
 		return;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DataTableTypeConverter_GetPropertiesSupported_m86F726749DF4BFF50DBE895EAD0EEB2F04DE6823 (DataTableTypeConverter_t506CC2F52B4C3BDCA7B60DB91D9AC2620B07BCC7* __this, RuntimeObject* ___0_context, const RuntimeMethod* method) 
+{
+	{
+		return (bool)0;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

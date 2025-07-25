@@ -2150,6 +2150,7 @@ struct AppContext_t0380D19FAC72CD59D46947D86DC1DAA3BCE638E0_StaticFields
 struct AppContextSwitches_t542F10E9BE2333B7BE24C8858C8A24EFA6C06D38_StaticFields
 {
 	bool ___SetActorAsReferenceWhenCopyingClaimsIdentity;
+	bool ___NoAsyncCurrentCulture;
 	bool ___EnforceJapaneseEraYearRanges;
 	bool ___FormatJapaneseFirstYearAsANumber;
 	bool ___EnforceLegacyJapaneseDateParsing;
